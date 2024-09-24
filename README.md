@@ -1,4 +1,4 @@
-# Btrfs Assistant & Grub-Btrfs Setup for Fedora
+# Btrfs Assistant & Grub-Btrfs Setup for Fedora Linux
 
 This bash script automates the installation and configuration of Btrfs Assistant and Grub-Btrfs on Fedora. It enables Btrfs snapshots to be displayed in the Grub boot menu and sets up automatic snapshot creation and Grub configuration updates.
 
