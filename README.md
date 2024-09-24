@@ -37,5 +37,9 @@ After completing the process, you can manage snapshots from the GUI with Btrfs A
 And you can see the snapshots taken on the GRUB screen.
 ![grub1](https://github.com/user-attachments/assets/5af97ca0-4c73-45cf-b4df-daf7355cf3e0)![grub2](https://github.com/user-attachments/assets/229fd63c-91c2-49dc-916e-97d2d6ed3c82)
 
+# Resources
+- https://sysguides.com/install-fedora-with-luks-fde-snapshot-rollback-support // grub-btrfs 
+- https://www.reddit.com/r/btrfs/comments/1cmdshf // snapper hook
+
 
 
