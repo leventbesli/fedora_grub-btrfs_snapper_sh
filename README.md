@@ -9,7 +9,8 @@ This bash script automates the installation and configuration of Btrfs Assistant
 - Installs DNF Snapper plugin for automatic snapshots.
 
 # Prerequisites
-- Fedora-based system with Root privileges.
+- Fedora-based system with btrfs file sytem.
+- Root privileges.
   
 # Installation
 - Clone this repository:
@@ -38,8 +39,9 @@ And you can see the snapshots taken on the GRUB screen.
 ![grub1](https://github.com/user-attachments/assets/5af97ca0-4c73-45cf-b4df-daf7355cf3e0)![grub2](https://github.com/user-attachments/assets/229fd63c-91c2-49dc-916e-97d2d6ed3c82)
 
 # Resources
-- https://sysguides.com/install-fedora-with-luks-fde-snapshot-rollback-support // grub-btrfs 
-- https://www.reddit.com/r/btrfs/comments/1cmdshf // snapper hook
+- https://sysguides.com/install-fedora-with-luks-fde-snapshot-rollback-support // grub-btrfs.
+- https://www.reddit.com/r/btrfs/comments/1cmdshf // snapper hook.
+- https://blog.leventbesli.com/displaying-snapshots-in-the-grub-menu-on-fedora-using-btrfs-assistant-and-grub-btrfs-easy-way/ // If you want to do it yourself manually.
 
 
 
