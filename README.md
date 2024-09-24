@@ -3,7 +3,7 @@
 This bash script automates the installation and configuration of Btrfs Assistant and Grub-Btrfs on Fedora. It enables Btrfs snapshots to be displayed in the Grub boot menu and sets up automatic snapshot creation and Grub configuration updates.
 
 # Features
-- Installs Btrfs-Assistan/Snappert and takes the first root snapshot.
+- Installs Btrfs-Assistan/Snapper and takes the first root snapshot.
 - Downloads, configures, and installs Grub-Btrfs to display snapshots in the Grub menu.
 - Configures automatic Grub configuration updates after each snapshot.
 - Installs DNF Snapper plugin for automatic snapshots.
