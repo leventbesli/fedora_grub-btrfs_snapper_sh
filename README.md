@@ -16,7 +16,7 @@ This bash script automates the installation and configuration of Btrfs Assistant
 - Clone this repository:
 
 ```
-git clone https://github.com/yourusername/fedora-btrfs-grub-setup.git
+git clone https://github.com/leventbesli/fedora-btrfs-grub-setup.git
 cd fedora-btrfs-grub-setup
 ```
 
