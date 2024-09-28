@@ -13,14 +13,7 @@ This bash script automates the installation and configuration of Btrfs Assistant
 - Root privileges.
   
 # Installation
-- Clone this repository:
-
-```
-git clone https://github.com/leventbesli/fedora_grub-btrfs_snapper_sh.git
-cd fedora_grub-btrfs_snapper_sh
-```
-
-- Make the script executable:
+- Download and make the script executable:
 
 ```
 chmod +x setup_btrfs_grub.sh
