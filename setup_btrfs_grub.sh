@@ -33,12 +33,6 @@ sed -i '/#GRUB_BTRFS_SCRIPT_CHECK=/a GRUB_BTRFS_SCRIPT_CHECK=grub2-script-check'
 printf "\033[1;33mInstalling grub-btrfs...\033[0m\n"
 make install
 
-# Updating timeline limits
-printf "\033[1;33mUpdating timeline limits...\033[0m\n"
-sed -i 's/^TIMELINE_LIMIT_HOURLY="[^"]*"/TIMELINE_LIMIT_HOURLY="1"/' /etc/snapper/configs/root
-sed -i 's/^TIMELINE_LIMIT_DAILY="[^"]*"/TIMELINE_LIMIT_DAILY="2"/' /etc/snapper/configs/root
-sed -i 's/^TIMELINE_LIMIT_WEEKLY="[^"]*"/TIMELINE_LIMIT_WEEKLY="1"/' /etc/snapper/configs/root
-
 # Update grub.cfg and enable grub-btrfsd service
 printf "\033[1;33mUpdating grub configuration and enabling grub-btrfsd service...\033[0m\n"
 grub2-mkconfig -o /boot/grub2/grub.cfg && systemctl enable --now grub-btrfsd.service
@@ -47,6 +41,14 @@ grub2-mkconfig -o /boot/grub2/grub.cfg && systemctl enable --now grub-btrfsd.ser
 printf "\033[1;33mCleaning up installation files...\033[0m\n"
 cd ..
 rm -rf grub-btrfs
+
+# Updating timeline limits
+printf "\033[1;33mUpdating timeline limits...\033[0m\n"
+sed -i 's/^TIMELINE_LIMIT_HOURLY="[^"]*"/TIMELINE_LIMIT_HOURLY="1"/' /etc/snapper/configs/root
+sed -i 's/^TIMELINE_LIMIT_DAILY="[^"]*"/TIMELINE_LIMIT_DAILY="2"/' /etc/snapper/configs/root
+sed -i 's/^TIMELINE_LIMIT_WEEKLY="[^"]*"/TIMELINE_LIMIT_WEEKLY="1"/' /etc/snapper/configs/root
+sed -i 's/^TIMELINE_LIMIT_MONTHLY="[^"]*"/TIMELINE_LIMIT_MONTHLY="0"/' /etc/snapper/configs/root
+sed -i 's/^TIMELINE_LIMIT_YEARLY="[^"]*"/TIMELINE_LIMIT_YEARLY="0"/' /etc/snapper/configs/root
 
 # Starting snapper-timeline.timer service
 printf "\033[1;33mStarting snapper-timeline.timer service...\033[0m\n"
@@ -58,9 +60,7 @@ systemctl start snapper-cleanup.timer && systemctl enable snapper-cleanup.timer
 
 # Restart grub-btrfsd service
 printf "\033[1;33mRestarting grub-btrfsd service...\033[0m\n"
-systemctl restart grub-btrfsd && systemctl enable grub-btrfsd
-
-
+systemctl restart grub-btrfsd
 
 printf "\033[1;33mSetup complete. Grub-btrfs and automatic snapshot configuration is now active.\033[0m\n"
 printf "\033[1;33mHint: You can manage snapshots from the GUI with Btrfs Assistant.\033[0m\n"
