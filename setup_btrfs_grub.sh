@@ -42,14 +42,6 @@ printf "\033[1;33mCleaning up installation files...\033[0m\n"
 cd ..
 rm -rf grub-btrfs
 
-# Updating timeline limits
-printf "\033[1;33mUpdating timeline limits...\033[0m\n"
-sed -i 's/^TIMELINE_LIMIT_HOURLY="[^"]*"/TIMELINE_LIMIT_HOURLY="1"/' /etc/snapper/configs/root
-sed -i 's/^TIMELINE_LIMIT_DAILY="[^"]*"/TIMELINE_LIMIT_DAILY="2"/' /etc/snapper/configs/root
-sed -i 's/^TIMELINE_LIMIT_WEEKLY="[^"]*"/TIMELINE_LIMIT_WEEKLY="1"/' /etc/snapper/configs/root
-sed -i 's/^TIMELINE_LIMIT_MONTHLY="[^"]*"/TIMELINE_LIMIT_MONTHLY="0"/' /etc/snapper/configs/root
-sed -i 's/^TIMELINE_LIMIT_YEARLY="[^"]*"/TIMELINE_LIMIT_YEARLY="0"/' /etc/snapper/configs/root
-
 # Starting snapper-timeline.timer service
 printf "\033[1;33mStarting snapper-timeline.timer service...\033[0m\n"
 systemctl start snapper-timeline.timer && systemctl enable snapper-timeline.timer
