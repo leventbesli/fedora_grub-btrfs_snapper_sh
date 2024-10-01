@@ -33,7 +33,6 @@ And you can see the snapshots taken on the GRUB screen.
 
 # Resources
 - https://sysguides.com/install-fedora-with-luks-fde-snapshot-rollback-support // grub-btrfs.
-- https://www.reddit.com/r/btrfs/comments/1cmdshf // snapper hook.
 - https://blog.leventbesli.com/displaying-snapshots-in-the-grub-menu-on-fedora-using-btrfs-assistant-and-grub-btrfs-easy-way/ // If you want to do it yourself manually.
 
 
