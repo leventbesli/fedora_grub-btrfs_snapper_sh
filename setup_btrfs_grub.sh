@@ -10,6 +10,14 @@ YELLOW='\033[33m'
 CYAN='\033[36m'
 GREEN='\033[32m'
 
+# Check if script runs as root
+checkRoot() {
+if [ "$EUID" -ne 0 ]; then
+  printf "%b\n" "${RED}Please run with root privileges.${RC}"
+  exit
+fi
+}
+
 # Check command
 command_exists() {
     command -v "$1" >/dev/null 2>&1
@@ -196,6 +204,7 @@ someNotices() {
     printf "%b\n" "${GREEN}Setup process completed.${RC}"
 }
 
+checkRoot
 checkPackageManager 'dnf'
 checkFs
 installBtrfsStack
