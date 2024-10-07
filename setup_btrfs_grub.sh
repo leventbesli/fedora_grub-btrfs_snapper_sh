@@ -2,7 +2,7 @@
 
 # This script automates the installation and root and home snapshot configuration of Snapper and installs Grub-Btrfs on Fedora.
 # Also installs python3-dnf-plugin-snapper package for automatic snapshots after dnf commands.
-# It's simplified version my pull request for linutil.
+# It's simplified version of my pull request for linutil.
 
 RC='\033[0m'
 RED='\033[31m'
